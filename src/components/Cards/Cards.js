@@ -1,24 +1,17 @@
 import React from 'react';
 import './Cards.css'; // Assuming you have some CSS for styling
 
-const Cards = () => {
+const CustomCards = () => {
   return (
-    <div className="card">
-      <div className="card-balance">
-        <h2>Balance</h2>
-        <p>$5,756</p>
-      </div>
-      <div className="card-details">
-        <p>CARD HOLDER</p>
-        <h3>Eddy Cusuma</h3>
-        <p>VALID THRU</p>
-        <h3>12/22</h3>
-      </div>
-      <div className="card-number">
-        <h3>3778 **** **** 1234</h3>
-      </div>
+    <div class="card" style={{"width": "18rem"}}>
+   
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
+  </div>
   );
 };
 
-export default Cards;
+export default CustomCards;

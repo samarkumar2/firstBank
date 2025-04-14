@@ -105,9 +105,6 @@ export default function SideBar() {
 
       </header>
 
-      <main style={{marginTop: "58px"}}>
-        <div className="container pt-4"></div>
-      </main>
 
     </div>
   )

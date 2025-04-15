@@ -19,7 +19,7 @@ export default function SideBar() {
                 aria-current="true"
               >
                 <i className="fas fa-tachometer-alt fa-fw me-3"></i>
-                <span style={{fontSize:'1.5rem'}}><AccountBalanceIcon/>First Bank</span>
+                <span style={{fontSize:'1.5rem'}}><AccountBalanceIcon style={{marginBottom: "5px"}}/>First Bank</span>
               </a>
               <a
                 href="#"

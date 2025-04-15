@@ -42,7 +42,7 @@ const renderCustomizedLabel = ({
 export function Piechart() {
   return (
     <div className="pie-chart-container">
-      <p>Expense Statics</p>
+    
       <div className="pie-chart">
         <PieChart width={200} height={200}>
           <Pie

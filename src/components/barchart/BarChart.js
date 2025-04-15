@@ -1,4 +1,4 @@
-import "./LineChart.css";
+import "./BarChart.css";
 import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -57,7 +57,7 @@ const data = [
   },
 ];
 
-export default function LineChart() {
+export default function BarCharts() {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>

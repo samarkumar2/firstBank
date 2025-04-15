@@ -1,21 +1,20 @@
 .my-cards{
     display: contents;
-    margin-left: 5px;
+   
 }
 .my-card-header{
     margin-left: 30px;
 }
 .see-all-btn{
+    margin-top: 5px;
     text-align: -webkit-center;
     font-size: small;
     font-weight: 500;
     font-family: sans-serif;
+    color: darkslategray;
 }
 .my-card-section{
     background-color: rgba(173, 216, 230, 0.268);
     border-radius: 1px solid rgba(225, 220, 245, 0.447);
     box-shadow: bisque;
 }
-/* .see-all{
-    margin-right: "200px"
-} */

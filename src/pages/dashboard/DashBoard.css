@@ -1,0 +1,80 @@
+.dashboard {
+  padding: 20px;
+}
+
+.my-card-section {
+  margin-bottom: 20px;
+  background-color: lightblue;
+  border-radius: 5px;
+}
+
+.my-card-header, .see-all-btn, .recent-transaction-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.my-cards {
+  display: flex;
+  padding: 5px;
+  overflow: overlay;
+  gap: 10px; /* Adjust the value as needed */
+
+}
+.my-card-header{
+  margin-left: 30px;
+}
+.card {
+  margin: 10px;
+}
+
+
+.see-all {
+  cursor: pointer;
+  color: darkslategray;
+  text-decoration: none;
+}
+
+.transaction-card {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 87%;
+  padding: 16px;
+  width: 300px;
+  background-color: #fff;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.description {
+  font-weight: bold;
+}
+
+.date {
+  color: #888;
+}
+
+.amount {
+  font-weight: bold;
+}
+
+.amount.negative {
+  color: red;
+}
+
+.amount.positive {
+  color: orange;
+}

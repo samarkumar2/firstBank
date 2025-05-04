@@ -1,13 +1,8 @@
 import * as React from "react";
-import './Header.css'
-
-import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
+import './Header.css';
 import SearchIcon from '@mui/icons-material/Search';
 import SettingsIcon from '@mui/icons-material/Settings';
 import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
-// import Photos from "../utils/image";
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 export default function Header() {
@@ -21,22 +16,22 @@ export default function Header() {
      
       <div className="col-4">
         <div className="card-custom">
-          <SearchIcon htmlColor="secondary"/> Search for something
+        <SearchIcon data-testid="SearchIcon" htmlColor="secondary"/> Search for something
         </div>
       </div>
       <div className="col-1">
         <div className="card-setting">
-          <SettingsIcon/>
+          <SettingsIcon data-testid="SettingsIcon"/>
         </div>
       </div>
       <div className="col-1">
         <div className="card-setting">
-          <NotificationsActiveOutlinedIcon/>
+          <NotificationsActiveOutlinedIcon data-testid="NotificationsActiveOutlinedIcon"/>
         </div>
       </div>
       <div className="col-1">
         <div className="card-setting">
-         <AccountBoxIcon/>
+         <AccountBoxIcon data-testid="AccountBoxIcon"/>
         </div>
       </div>
     </div>

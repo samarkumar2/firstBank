@@ -1,0 +1,43 @@
+.dashboard {
+    padding: 20px;
+  }
+  
+  .my-card-section {
+    margin-bottom: 20px;
+    background-color: lightblue;
+    border-radius: 5px;
+  }
+  
+  .my-card-header, .see-all-btn, .recent-transaction-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .my-cards {
+    display: flex;
+    padding: 5px;
+    overflow: overlay;
+    gap: 10px; /* Adjust the value as needed */
+  
+  }
+  .my-card-header{
+    margin-left: 30px;
+  }
+  .card {
+    margin: 10px;
+  }
+  
+  .error{
+    color: red;
+  }
+  .see-all {
+    cursor: pointer;
+    color: darkslategray;
+    margin-left: 100px;
+    font-weight: 500;
+  }
+  
+  .form-group{
+    margin: 10px;
+  }

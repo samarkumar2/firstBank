@@ -19,7 +19,7 @@ const initialState = {
         name: "samar",
         expiry: "12/29",
       
-      },
+      }, 
     ],
     status: 'idle',
     error: null,

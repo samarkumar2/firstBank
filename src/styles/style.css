@@ -1,0 +1,73 @@
+/* Base styles (mobile-first) already defined above */
+
+/* Tablets (min-width: 600px) */
+@media (min-width: 600px) {
+    body {
+      font-size: 1.05rem;
+    }
+  
+    .container {
+      padding: 0 2rem;
+    }
+  
+    .col {
+      min-width: 300px;
+    }
+  }
+  
+  /* Small laptops (min-width: 768px) */
+  @media (min-width: 768px) {
+    .row {
+      flex-direction: row;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Desktops (min-width: 1024px) */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 1.1rem;
+    }
+  
+    .container {
+      max-width: 960px;
+    }
+  
+    .col {
+      min-width: 350px;
+    }
+  }
+  
+  /* Large screens (min-width: 1280px) */
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1140px;
+    }
+  
+    h1 {
+      font-size: 3rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Extra large screens (min-width: 1440px) */
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1320px;
+    }
+  
+    body {
+      font-size: 1.15rem;
+    }
+  }
+  

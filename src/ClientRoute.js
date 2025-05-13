@@ -5,7 +5,9 @@ import { useDispatch } from "react-redux";
 import ClientLayout from "./layout/ClientLayout";
 import { ClipLoader } from "react-spinners"; // Import the spinner component
 
-const AuthenticationPage = lazy(() => import("./authentication/AuthenticationPage"));
+const AuthenticationPage = lazy(() =>
+  import("./authentication/AuthenticationPage")
+);
 const DashboardPage = lazy(() => import("./pages/dashboard/Dashboard"));
 const TransactionPage = lazy(() => import("./pages/transaction/Transaction"));
 const Setting = lazy(() => import("./pages/settings/Setting"));
@@ -19,18 +21,18 @@ function ClientRoute(props) {
   const dispatch = useDispatch();
 
   const dataFetch = async () => {
-    const storedUserDataString = localStorage.getItem('userData');
+    const storedUserDataString = localStorage.getItem("userData");
     if (storedUserDataString !== null && storedUserDataString !== undefined) {
       try {
         const storedUserData = JSON.parse(storedUserDataString);
-        if (typeof storedUserData === 'object' && storedUserData !== null) {
+        if (typeof storedUserData === "object" && storedUserData !== null) {
           setUserData(storedUserData);
           dispatch(addEmp(storedUserData));
         } else {
-          console.error('Stored data is not an object:', storedUserData);
+          console.error("Stored data is not an object:", storedUserData);
         }
       } catch (error) {
-        console.error('Error parsing stored data:', error);
+        console.error("Error parsing stored data:", error);
       }
     }
     setLoading(false); // Set loading to false after data is fetched
@@ -55,24 +57,39 @@ function ClientRoute(props) {
         <Route
           path="/dashboardPage"
           element={
-            <Suspense fallback={<ClipLoader size={50} color={"#123abc"} loading={true} />}>
-            <ClientLayout component={DashboardPage}></ClientLayout>
+            <Suspense
+              fallback={
+                <ClipLoader size={50} color={"#123abc"} loading={true} />
+              }
+            >
+              <ClientLayout component={DashboardPage}></ClientLayout>
             </Suspense>
           }
         />
-           <Route
+        <Route
           path="/transactions"
           element={
-            <Suspense fallback={<ClipLoader size={50} color={"#123abc"} loading={true} />}>
-            <ClientLayout component={TransactionPage}></ClientLayout>
+            <Suspense
+              fallback={
+                <ClipLoader size={50} color={"#123abc"} loading={true} />
+              }
+            >
+              <ClientLayout component={TransactionPage}></ClientLayout>
             </Suspense>
           }
         />
         <Route
           path="/setting"
           element={
-            <Suspense fallback={<ClipLoader size={50} color={"#123abc"} loading={true} />}>
-             <ClientLayout component={Setting} userData={userData}></ClientLayout>
+            <Suspense
+              fallback={
+                <ClipLoader size={50} color={"#123abc"} loading={true} />
+              }
+            >
+              <ClientLayout
+                component={Setting}
+                userData={userData}
+              ></ClientLayout>
             </Suspense>
           }
         />
@@ -80,7 +97,11 @@ function ClientRoute(props) {
           <Route
             path="/*"
             element={
-              <Suspense fallback={<ClipLoader size={50} color={"#123abc"} loading={true} />}>
+              <Suspense
+                fallback={
+                  <ClipLoader size={50} color={"#123abc"} loading={true} />
+                }
+              >
                 <AuthenticationPage
                   LoginComponent={Login}
                   RegisterComponent={Register}

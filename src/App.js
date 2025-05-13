@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-
+import './styles/style.css'
 import ClientRoute from "./ClientRoute";
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

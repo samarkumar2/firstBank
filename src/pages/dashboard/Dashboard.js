@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback,lazy } from "react";
+import React, { useState, useEffect, useCallback, lazy } from "react";
 import "./DashBoard.css"; // Make sure to create a corresponding CSS file for styling
 
 import Card from "react-credit-cards";
@@ -16,23 +16,22 @@ const BarCharts = lazy(() => import("../../components/barchart/BarChart"));
 const LineGraph = lazy(() => import("../../components/linechart/LineGraph"));
 
 const Dashboard = () => {
-
   const [showAll, setShowAll] = useState(false);
 
   const dispatch = useDispatch();
   const empData = useSelector((state) => state.emps);
-  const cardDetail =useCallback(useSelector((state)=>state.detail.cardDetails),[])
+  const cardDetail = useCallback(
+    useSelector((state) => state.detail.cardDetails),
+    []
+  );
 
   const handleToggle = useCallback(() => {
     setShowAll(!showAll);
-  },[showAll]);
+  }, [showAll]);
 
+  let user = useUsers("https://jsonplaceholder.typicode.com/users");
+  console.log(user);
 
-      let user = useUsers('https://jsonplaceholder.typicode.com/users')
-      console.log(user)
-
-
-  
   return (
     <div className="dashboard">
       <div className="row my-card-section">
@@ -75,23 +74,26 @@ const Dashboard = () => {
                 ))}
           </div>
           <div className="col-4">
-            
-    <div className="transaction-card">
-      
-      {transactions.map((transaction, index) => (
-        <div key={index} className="transaction">
-          <div className="icon">📄</div>
-          <div className="details">
-            <div className="description">{transaction.description}</div>
-            <div className="date">{transaction.date}</div>
-            
-          </div>
-          <div className={`amount ${transaction.amount < 0 ? 'negative' : 'positive'}`}>
-              {transaction.amount < 0 ? `-$${Math.abs(transaction.amount)}` : `+$${transaction.amount}`}
+            <div className="transaction-card">
+              {transactions.map((transaction, index) => (
+                <div key={index} className="transaction">
+                  <div className="icon">📄</div>
+                  <div className="details">
+                    <div className="description">{transaction.description}</div>
+                    <div className="date">{transaction.date}</div>
+                  </div>
+                  <div
+                    className={`amount ${
+                      transaction.amount < 0 ? "negative" : "positive"
+                    }`}
+                  >
+                    {transaction.amount < 0
+                      ? `-$${Math.abs(transaction.amount)}`
+                      : `+$${transaction.amount}`}
+                  </div>
+                </div>
+              ))}
             </div>
-        </div>
-      ))}
-    </div>
           </div>
         </div>
         <div className="row m-2">

@@ -6,7 +6,7 @@ const QuickTransfer = () => {
   const [amount, setAmount] = useState(525.50);
 
   return (
-    <div className="card" data-test-id="card-layout" style={{ width: '25rem'  }}>
+    <div className="card" data-test-id="card-layout" style={{ width: '25rem'}}>
     <div className="card-body">
   
       <div className="input-group mb-3" >
